@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:androd="http://schemas.android.com/tools"
+    android:background="#efefef">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/dashback">
+
+        <ImageView
+            android:id="@+id/back_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            androd:src="@drawable/back_log"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/back_log"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_lprofile_img"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Sure Mwaka"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:textColor="#fff"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp">
+            <ImageView
+                android:id="@+id/notifications"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:src="@drawable/notification" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/nav_view"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="end"
+        app:fabCradleMargin="5dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:hideOnScroll="true">
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/home" />
+        <ImageView
+            android:id="@+id/navExpenses"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/expenses" />
+        <ImageView
+            android:id="@+id/navWallet"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/wallet" />
+        <ImageView
+            android:id="@+id/navProfile"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/profile" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:clickable="true"
+        android:id="@+id/navChat"
+        android:layout_height="60dp"
+        app:elevation="15dp"
+        app:srcCompat="@drawable/chat"
+        android:backgroundTint="#fff"
+        app:layout_anchor="@id/nav_view"
+        android:focusable="true" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

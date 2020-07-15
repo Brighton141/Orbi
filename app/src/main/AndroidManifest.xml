@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.orbicoin">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name="com.malingi.orbicoin.chat_activities.Group_ChatActivity">
+        </activity>
+        <activity android:name="com.malingi.orbicoin.authentication.AddUserActivity">
+        </activity>
+        <activity android:name="com.malingi.orbicoin.dash_activities.WithdrawActivity" />
+        <activity android:name="com.malingi.orbicoin.dash_activities.AccountsActivity" />
+        <activity android:name="com.malingi.orbicoin.authentication.RegisterActivity" />
+        <activity android:name="com.malingi.orbicoin.authentication.LoginActivity" />
+        <activity android:name="com.malingi.orbicoin.authentication.SplashActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.malingi.orbicoin.chat_activities.Chat_mainActivity" />
+        <activity android:name="com.malingi.orbicoin.dash_activities.CreditActivity" />
+        <activity android:name="com.malingi.orbicoin.dash_activities.DepositsActivity" />
+        <activity android:name="com.malingi.orbicoin.dash_activities.PaymentActivity" />
+        <activity android:name="com.malingi.orbicoin.dash_activities.TransferActivity" />
+        <activity android:name="com.malingi.orbicoin.nav_activities.Transaction" />
+        <activity android:name="com.malingi.orbicoin.nav_activities.ProfileActivity" />
+        <activity android:name="com.malingi.orbicoin.DashboardActivity" />
+    </application>
+</manifest>
